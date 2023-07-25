@@ -32,7 +32,9 @@ const Card = ({ pokemon }: { pokemon: Pokemon }) => {
           </div>
         </div>
 
-        <a href="/">Click for more info...</a>
+        <a href={`pokemon/${pokemon.url.split("/")[6]}`}>
+          Click for more info...
+        </a>
       </div>
     </div>
   );
