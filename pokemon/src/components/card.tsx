@@ -6,7 +6,12 @@ const Card = ({ pokemon }: { pokemon: Pokemon }) => {
   return (
     <div className="card">
       <div className="card-image">
-        <img src={pokemon.image} alt={pokemon.name} />
+        <img
+          src={`https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/${
+            pokemon.url.split("/")[6]
+          }.png`}
+          alt={pokemon.name}
+        />
       </div>
       <div className="card-content">
         <div className="content">
@@ -26,9 +31,8 @@ const Card = ({ pokemon }: { pokemon: Pokemon }) => {
             <div className="card-progressbar-fill-inner"></div>
           </div>
         </div>
-      
-          <a href="/">Click for more info...</a>
-        
+
+        <a href="/">Click for more info...</a>
       </div>
     </div>
   );
